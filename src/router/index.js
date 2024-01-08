@@ -17,6 +17,15 @@ const routes = [
       return import(/* webpackChunkName: "about" */ "../views/AboutView.vue");
     },
   },
+  {
+    path: "/random-list",
+    name: "random-list",
+    component: function () {
+      return import(
+        /* webpackChunkName: "random-list" */ "../views/RandomListView.vue"
+      );
+    },
+  },
 ];
 
 const router = createRouter({
