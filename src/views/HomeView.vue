@@ -5,6 +5,9 @@
       <li>
         <router-link to="/random-list">Random list</router-link>
       </li>
+      <li>
+        <router-link to="/random-dices">Random dices</router-link>
+      </li>
     </ul>
   </div>
 </template>
