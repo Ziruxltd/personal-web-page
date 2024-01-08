@@ -27,10 +27,11 @@ const randomOrder = ref('');
 const orderNumber = ref(false);
 
 function setOrderNumbers() {
-    const list = randomOrder.value.split('\n');
+    const list = randomOrder.value.split('\n').filter(item => item.trim() !== '');
     const newList = [];
     for (let i = 0; i < list.length; i++) {
         if (orderNumber.value) {
+            console.log(list[i]);
             newList.push(`${i + 1}) ${list[i]}`);
         } else {
             newList.push(list[i].replace(/^\d+\)\s/, ''));

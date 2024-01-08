@@ -1,7 +1,7 @@
 <template>
   <div class="home">
+    <h2>Random</h2>
     <ul>
-      <h2>Random</h2>
       <li>
         <router-link to="/random-list">Random list</router-link>
       </li>
