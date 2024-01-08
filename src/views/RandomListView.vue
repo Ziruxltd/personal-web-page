@@ -12,7 +12,7 @@
         </div>
         <div id="btn-checkboxes">
             <button id="randomize" @click="randomizeList">Randomize!</button>
-            <div id="checkbox-order">
+            <div id="checkbox-container">
                 <label for="order-number">Show order number</label>
                 <input type="checkbox" v-model="orderNumber" @change="setOrderNumbers">
             </div>
@@ -87,7 +87,27 @@ function randomizeList() {
 
 #btn-checkboxes {
     display: flex;
-    align-items: center; /* Optional: This will vertically align the items in the middle */
+    align-items: center;
+}
+
+#checkbox-container {
+    margin-left: 15px;
+    display: flex;
+    align-items: center;
+}
+
+#randomize {
+    background-color: #BC6C25;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+#randomize:hover {
+    background-color: #DDA15E;
 }
 </style>
   
