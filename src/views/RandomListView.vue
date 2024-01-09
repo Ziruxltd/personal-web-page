@@ -11,7 +11,8 @@
             </div>
         </div>
         <div id="btn-checkboxes">
-            <button id="randomize" @click="randomizeList">Randomize!</button>
+            <my-button id="randomize" :label="'Randomize!'" @btn-clicked="randomizeList"/>
+            <!-- <button id="randomize" @click="randomizeList">Randomize!</button> -->
             <div id="checkbox-container">
                 <label for="order-number">Show order number</label>
                 <input type="checkbox" v-model="orderNumber" @change="setOrderNumbers">
@@ -22,6 +23,8 @@
 
 <script setup>
 import { ref } from 'vue';
+import MyButton from '@/components/MyButton.vue';
+
 const rawList = ref('');
 const randomOrder = ref('');
 const orderNumber = ref(false);
